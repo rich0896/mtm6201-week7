@@ -1,0 +1,58 @@
+.dice circle {
+    fill: cornflowerblue;
+    transition: all 0.5s;
+    transform-origin: 100px 100px;
+}
+
+.dice:hover circle {
+    transform: scale(1.1);
+}
+
+.cls-1 {
+    fill: #ffe269;
+}
+
+.cls-2 {
+    fill: #fff;
+}
+
+.cls-3 {
+    fill: #fcf0c0;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.eye {
+    fill: pink;
+}
+
+.pupil {
+    animation: move 0.2s infinite;
+}
+
+#mouth {
+    transform-origin: 250px 320px;
+    transition: transform 1s;
+}
+
+.smily-wrap:hover .pupil {
+    animation-play-state: paused;
+}
+
+.smily-wrap:hover #mouth {
+    transform: rotateX(180deg);
+    transform-origin: 250px 320px;
+    transition: transform 1s;
+}
